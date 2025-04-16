@@ -1,4 +1,4 @@
-# 🏭 CintaClasificadoraQT
+# 🏭 CintaClasificadora
 
 Proyecto de control de una cinta transportadora con clasificación automática de cajas según altura, usando C++ y Qt para la interfaz gráfica, y un microcontrolador ATmega328P como sistema embebido.
 
