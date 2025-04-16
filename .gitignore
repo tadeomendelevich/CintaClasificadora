@@ -1,0 +1,28 @@
+# Carpetas de compilación
+build*/
+*.pro.user
+*.pro.user.*
+*.autosave
+*.obj
+*.o
+*.exe
+*.dll
+
+# Archivos generados por Qt
+moc_*
+ui_*
+qrc_*
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de backup
+*~
+*.bak
+*.swp
+
+# Archivos temporales de editores
+.vscode/
+.idea/
+*.log
