@@ -1,5 +1,7 @@
 # 🏭 CintaClasificadora
 
+![Cinta clasificadora en funcionamiento](cintaClasificadora.gif)
+
 Proyecto de control de una cinta transportadora con clasificación automática de cajas según altura, usando C++ y Qt para la interfaz gráfica, y un microcontrolador ATmega328P como sistema embebido.
 
 ---
@@ -28,6 +30,3 @@ Este sistema clasifica cajas en tiempo real mediante:
 | Git + GitHub           | Control de versiones                     |
 
 ---
-
-## 🧩 Estructura del Proyecto
-
