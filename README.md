@@ -47,11 +47,14 @@ Sistema de clasificación industrial con dos capas: un **ATmega328P** que lee se
 ---
 
 ## Arquitectura
+
+```
 PC (Qt 6.5 / C++)
 │
 ├── SerialWorker ──► QSerialPort ──► Parser UNER ──► Señales Qt ──► Dashboard
 │
 └── Control manual ──► Comandos UNER ──► USART ──────────────────► ATmega328P
+
 ATmega328P (firmware C)
 │
 ├── HC-SR04 ──► Input Capture / Timer1 ──► altura_cm ──► Categoría A/B/C
@@ -61,6 +64,7 @@ ATmega328P (firmware C)
 ├── Servos ──────────────────────────────────────────► PWM Timer2
 │
 └── Máquina de estados ──► USART ──► Trama UNER ──► PC
+```
 
 > La medición ultrasónica usa Input Capture sobre Timer1 para calcular el tiempo de vuelo
 > con precisión de microsegundos — sin `delay()`, sin busy-wait.
@@ -100,6 +104,8 @@ Los umbrales de altura para las categorías A, B y C se envían desde la PC al m
 ---
 
 ## Estructura del proyecto
+
+```
 firmware/
 ├── main.c          — Máquina de estados, loop principal
 ├── hcsr04.c        — Driver ultrasónico con Input Capture
@@ -110,6 +116,7 @@ qt_app/
 ├── mainwindow.cpp  — Dashboard y lógica de interfaz
 ├── serialworker.cpp — Hilo de comunicación serial
 └── unerparser.cpp  — Parser de tramas UNER
+```
 
 ---
 
